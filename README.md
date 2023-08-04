@@ -2,6 +2,8 @@
 
 The Hunt Showdown Legendary Hunter Randomizer is a simple, intuitive, and interactive tool that randomly selects a legendary hunter from the game Hunt Showdown. This tool aims to help users who are indecisive or simply want a randomized selection. 
 
+![Screenshot of the tool](images/demo.jpg "Example")
+
 ## Features
 
 - A complete list of legendary hunters from Hunt Showdown.

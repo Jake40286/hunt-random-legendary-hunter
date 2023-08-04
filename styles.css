@@ -1,20 +1,54 @@
-.boxContainer {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.box {
-    border: 1px solid black;
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .hunters {
+    column-count: 6; /* or any number of columns you want */
+    column-gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .hunter {
+    break-inside: avoid;
     padding: 10px;
-    width: 30%;
-    min-height: 200px;
-    overflow-y: auto;
-}
-
-.box div {
-    border: 1px solid #ddd;
-    padding: 5px;
-    margin: 5px 0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     cursor: pointer;
-}
+    text-align: center;
+  }
+  
+  .hunter:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hunter.selected {
+    background-color: #008cffcc;  /* Highlight color for selected hunters */
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #selectedHunter {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

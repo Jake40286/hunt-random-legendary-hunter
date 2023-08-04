@@ -11,52 +11,42 @@ const hunters = ["Bad Hand", "Baitata", "Billy Story", "Cain", "Carcass Gunrunne
     "The Scaled Ward", "The Skinflint", "The Skinned", "The Sovereign", "The Spirited", "The Third Son",
     "The Turncoat", "The Viper:Onset", "The Viper:Rise", "The Viper:Surge", "The Viper:Frenzy", "The Wayfarer", "The Wayward Helmsman", "The Witch Hunter", "Weird Sister", "Worm Bite", "Zhong Kui"];
 
-//...
-const box1 = document.getElementById('box1');
-const box2 = document.getElementById('box2');
-
-box1.addEventListener('click', function (e) {
-    if (e.target !== this) {
-        box2.appendChild(e.target);
-        saveSelection();
-    }
-});
-
-box2.addEventListener('click', function (e) {
-    if (e.target !== this) {
-        box1.appendChild(e.target);
-        saveSelection();
-    }
-});
-
-function saveSelection() {
-    const selectedHunters = Array.from(box2.children).map(element => element.textContent);
-    localStorage.setItem('selectedHunters', JSON.stringify(selectedHunters));
-}
-
-function loadSelection() {
-    const selectedHunters = JSON.parse(localStorage.getItem('selectedHunters')) || [];
-    for (const hunter of hunters) {
+    function createHunter(name) {
         const div = document.createElement('div');
-        div.textContent = hunter;
-        if (selectedHunters.includes(hunter)) {
-            box2.appendChild(div);
-        } else {
-            box1.appendChild(div);
+        div.className = 'hunter';
+        div.textContent = name;
+        div.addEventListener('click', function() {
+          this.classList.toggle('selected');
+          saveSelection();
+        });
+        return div;
+      }
+      
+      function saveSelection() {
+        const selectedHunters = Array.from(document.querySelectorAll('.hunter.selected')).map(element => element.textContent);
+        localStorage.setItem('selectedHunters', JSON.stringify(selectedHunters));
+      }
+      
+      function loadSelection() {
+        const selectedHunters = JSON.parse(localStorage.getItem('selectedHunters')) || [];
+        const container = document.getElementById('hunters');
+        for (const hunter of hunters) {
+          const div = createHunter(hunter);
+          if (selectedHunters.includes(hunter)) {
+            div.classList.add('selected');
+          }
+          container.appendChild(div);
         }
-    }
-}
-
-function randomHunter() {
-    const selected = Array.from(box2.children);
-    if (selected.length === 0) {
-        alert('Please select at least one hunter.');
-        return;
-    }
-    const index = Math.floor(Math.random() * selected.length);
-    document.getElementById('selectedHunter').textContent = selected[index].textContent;
-}
-
-window.onload = function () {
-    loadSelection();
-}
+      }
+      
+      function randomHunter() {
+        const selected = Array.from(document.querySelectorAll('.hunter.selected'));
+        if (selected.length === 0) {
+          alert('Please select at least one hunter.');
+          return;
+        }
+        const index = Math.floor(Math.random() * selected.length);
+        document.getElementById('selectedHunter').textContent = selected[index].textContent;
+      }
+      
+      window.onload = loadSelection;

@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hunt Showdown Random Hunter Selector</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Hunt Showdown Random Hunter Selector</h1>
+  <div id="hunters" class="hunters">
+    <!-- Hunters will be inserted here -->
+  </div>
+  <button onclick="randomHunter()">Roll a Random Hunter</button>
+  <div id="selectedHunter"></div>
 
-    <button onclick="randomHunter()">Roll a Random Hunter</button>
-    <h2>Your Selected Hunter: <span id="selectedHunter">None</span></h2>
-
-    <h2>Select Eligible Hunters:</h2>
-    <div class="boxContainer">
-        <div id="box1" class="box">
-            <!-- Available hunters will be inserted here by the JavaScript -->
-        </div>
-        
-        <div id="box2" class="box">
-            <!-- Selected hunters will be inserted here by the JavaScript -->
-        </div>
-    </div>
-
-    <script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

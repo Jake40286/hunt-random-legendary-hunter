@@ -1,26 +1,25 @@
-# Hunt Showdown Random Hunter Selector
+# Hunt Showdown Legendary Hunter Randomizer
 
-This project is a web-based random hunter selector for the video game Hunt Showdown. It allows the user to select eligible hunters from a provided list, and then randomly selects one of those hunters upon request.
+The Hunt Showdown Legendary Hunter Randomizer is a simple, intuitive, and interactive tool that randomly selects a legendary hunter from the game Hunt Showdown. This tool aims to help users who are indecisive or simply want a randomized selection. 
 
 ## Features
 
-- Display a list of all the legendary hunters in Hunt Showdown.
-- Allow the user to select hunters that will be eligible for random selection.
-- Display a button that, when clicked, randomly selects one of the eligible hunters and displays it on the screen.
-- Remember the user's selection of eligible hunters across page reloads using localStorage.
+- A complete list of legendary hunters from Hunt Showdown.
+- An interactive selection interface allowing users to select or deselect any hunter. The selected hunters are highlighted.
+- A "Roll a Random Hunter" button to randomly select a hunter from the selected ones.
+- The selections are saved in the browser's local storage, so they persist across sessions.
+- Aesthetic and easy-to-use interface with a column-wise arrangement of hunters for a better visual experience.
 
-## How it Works
+## Implementation
 
-When the page loads, it displays two boxes. The left box contains a list of all the legendary hunters in Hunt Showdown. The user can click on any of the hunters in this box to move them to the right box, which represents the eligible hunters for random selection.
+This web tool is implemented using HTML, CSS, and JavaScript. The CSS styles have been updated to provide a column-wise layout and better user experience.
 
-There is also a button on the page labeled "Roll a Random Hunter". When clicked, this button will randomly select one of the hunters in the right box (if there are any) and display their name underneath the button.
-
-The selection of eligible hunters is stored in the user's browser using the localStorage Web API. This allows the selection to persist across page reloads. When the page is reloaded, it will load the selection from localStorage and display the selected hunters in the right box.
+The JavaScript handles user interaction, selection persistence using the local storage, and the random selection of a hunter.
 
 ## How to Use
 
-To use this project, simply open the HTML file in your web browser. Select the hunters you want to be eligible for random selection by clicking on their names in the left box. Once you've made your selection, click the "Roll a Random Hunter" button to select a random hunter from your selection.
+- Select your preferred hunters from the list. You can select as many as you want. The selected hunters will be highlighted.
+- Click the "Roll a Random Hunter" button. The randomly selected hunter will be displayed.
+- Your selections are automatically saved and will be available for the next session.
 
-## Technologies Used
-
-This project is written in HTML, CSS, and JavaScript. It uses the localStorage Web API to store the user's selection of eligible hunters.
+Enjoy the randomization and may the odds be in your favor in the swamps of Hunt Showdown!

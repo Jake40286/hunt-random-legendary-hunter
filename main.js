@@ -50,7 +50,17 @@ const hunters = ["Bad Hand", "Baitata", "Billy Story", "Cain", "Carcass Gunrunne
       }
 
       function toggleNightMode() {
-        document.body.classList.toggle('night-mode');
-    }    
-      
-      window.onload = loadSelection;
+        var body = document.body;
+        body.classList.toggle('night-mode');
+        // Save the mode in localStorage.
+        localStorage.setItem('nightMode', body.classList.contains('night-mode') ? 'true' : 'false');
+    }
+    
+    window.onload = function() {
+        loadSelection();
+        // Apply night mode if it was selected before.
+        var nightMode = localStorage.getItem('nightMode');
+        if (nightMode === 'true') {
+            document.body.classList.add('night-mode');
+        }
+    };

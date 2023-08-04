@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        /* Your CSS styling goes here. */
-    </style>
-    <script>
-        window.onload = function() {
-            let hunters = ["Baitata", "Billy Story", "Cain", "Carcass Gunrunner", ...]; // add all your hunters here
-
-            // Load previous selection from cookies
-            let previousSelection = document.cookie.replace(/(?:(?:^|.*;\s*)selectedHunter\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-            if (previousSelection) {
-                document.getElementById('selectedHunter').textContent = previousSelection;
-            }
-
-            document.getElementById('rollButton').onclick = function() {
-                let randomIndex = Math.floor(Math.random() * hunters.length);
-                let selectedHunter = hunters[randomIndex];
-
-                // Display selected hunter
-                document.getElementById('selectedHunter').textContent = selectedHunter;
-
-                // Store selection in cookies for 7 days
-                let expiryDate = new Date();
-                expiryDate.setDate(expiryDate.getDate() + 7);
-                document.cookie = `selectedHunter=${selectedHunter}; expires=${expiryDate.toUTCString()}; path=/`;
-            }
-        };
-    </script>
+    <title>Hunt Showdown Random Hunter Selector</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <button id="rollButton">Roll a Hunter</button>
-    <p id="selectedHunter"></p>
+    <h1>Hunt Showdown Random Hunter Selector</h1>
+
+    <button onclick="randomHunter()">Roll a Random Hunter</button>
+    <h2>Your Selected Hunter: <span id="selectedHunter">None</span></h2>
+
+    <h2>Select Eligible Hunters:</h2>
+    <div class="boxContainer">
+        <div id="box1" class="box">
+            <!-- Available hunters will be inserted here by the JavaScript -->
+        </div>
+        
+        <div id="box2" class="box">
+            <!-- Selected hunters will be inserted here by the JavaScript -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>

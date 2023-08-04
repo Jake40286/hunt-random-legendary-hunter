@@ -1,0 +1,20 @@
+.boxContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 10px;
+    width: 30%;
+    min-height: 200px;
+    overflow-y: auto;
+}
+
+.box div {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}

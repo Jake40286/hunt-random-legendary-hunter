@@ -52,3 +52,28 @@ body {
     text-align: center;
   }
   
+  body.night-mode {
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+.night-mode .hunter {
+    background-color: #333;
+    border-color: #555;
+}
+
+.night-mode .hunter:hover {
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.night-mode .hunter.selected {
+    background-color: #0056b3;
+}
+
+.night-mode button {
+    background-color: #0056b3;
+}
+
+.night-mode button:hover {
+    background-color: #003f7f;
+}

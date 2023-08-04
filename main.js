@@ -48,5 +48,9 @@ const hunters = ["Bad Hand", "Baitata", "Billy Story", "Cain", "Carcass Gunrunne
         const index = Math.floor(Math.random() * selected.length);
         document.getElementById('selectedHunter').textContent = selected[index].textContent;
       }
+
+      function toggleNightMode() {
+        document.body.classList.toggle('night-mode');
+    }    
       
       window.onload = loadSelection;

@@ -1,6 +1,6 @@
 const hunters = ["Bad Hand", "Baitata", "Billy Story", "Cain", "Carcass Gunrunner", "Cardinal Rain", "Carter", "Comedia Della Morde",
     "Daughter of Decay", "Dead Blessing", "Deckhand", "Devil's Advocate", "Dire Wolf", "False Saint",
-    "Felis", "Gar", "Hail Mary", "Hawkshaw Jack", "Kill Buyer", "Llorona's Heir", "Lonely Howl", "Lulu",
+    "Felis", "Gar", "Hail Mary", "Hawkshaw Jack", "Iron Bark", "Kill Buyer", "Llorona's Heir", "Lonely Howl", "Lulu",
     "Luna Wolf", "Luz Mala", "Mama Maye", "Marshall Brewer", "Monroe", "North Star", "Ochenkov's Widow",
     "Perchta:Dawn", "Perchta:Dusk", "Plague Doctor", "Private Eye", "Redneck", "Redshirt", "Scaramuccia", "Sgt. Bridgewater", "Sheriff Hardin",
     "Sofia", "Steel Eyed", "Teche Wraith", "The Archaeologist", "The Beast Hunter", "The Black Coat",
